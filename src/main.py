@@ -4,7 +4,9 @@ from clientserver import *
 import sys
 
 
-
+# From command line type python main.py c to start client
+# From command line type python main.py s to start server
+# From command line type python main.py cs to start clientserver
 
 if __name__ == "__main__":
 
