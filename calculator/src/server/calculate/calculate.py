@@ -1,30 +1,28 @@
 import re
 
 
-def getValidationRegex():
+def get_validation_regex():
     white_list = '''acos|asin|atan|atan2|ceil|cos|cosh|
         degrees|exp|fabs|floor|fmod|frexp|hypot|ldexp|
         log|log10|modf|pow|radians|sin|sinh|sqrt|tan|tanh'''
-    regexString = '[^' + white_list + '|0-9|+\-\*/\^\(\).//]'
-    return re.compile(regexString)
+    regex_string = '[^' + white_list + '|0-9|+\-\*/\^\(\).//]'
+    return re.compile(regex_string)
 
 
-
-def isValidInput(funcString):
-    regex = getValidationRegex()
-    match = regex.search(funcString)
+def is_valid_input(func_string):
+    regex = get_validation_regex()
+    match = regex.search(func_string)
     if match == None:
         return True
     else:
         return False
 
 
-
-def calculate(funcString):
-    if isValidInput(funcString):
-        funcString = funcString.replace("^", "**")
+def calculate(func_string):
+    if is_valid_input(func_string):
+        funcString = func_string.replace("^", "**")
         try:
-            answer = str(eval(funcString))
+            answer = str(eval(func_string))
             return answer
         except:
             return "error"
@@ -32,10 +30,9 @@ def calculate(funcString):
         return "error"
 
 
-
-def calculateList(funcList):
-    newList = []
-    for i in range(len(funcList)):
-        funcString = funcList[i]
-        newList.append((funcString, calculate(funcString)))
-    return newList
+def calculate_list(func_list):
+    new_list = []
+    for i in range(len(func_list)):
+        func_string = func_list[i]
+        new_list.append((func_string, calculate(func_string)))
+    return new_list
