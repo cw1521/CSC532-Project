@@ -20,7 +20,7 @@ def is_valid_input(func_string):
 
 def calculate(func_string):
     if is_valid_input(func_string):
-        funcString = func_string.replace("^", "**")
+        func_string = func_string.replace("^", "**")
         try:
             answer = str(eval(func_string))
             return answer
