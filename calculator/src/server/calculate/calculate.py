@@ -5,7 +5,7 @@ def getValidationRegex():
     white_list = '''acos|asin|atan|atan2|ceil|cos|cosh|
         degrees|exp|fabs|floor|fmod|frexp|hypot|ldexp|
         log|log10|modf|pow|radians|sin|sinh|sqrt|tan|tanh'''
-    regexString = '[^' + white_list + '|0-9|+\-\*/\^\(\)]'
+    regexString = '[^' + white_list + '|0-9|+\-\*/\^\(\).//]'
     return re.compile(regexString)
 
 
