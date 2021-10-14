@@ -24,7 +24,7 @@ def calculate(funcString):
     if isValidInput(funcString):
         funcString = funcString.replace("^", "**")
         try:
-            answer = eval(funcString)
+            answer = str(eval(funcString))
             return answer
         except:
             return "error"
