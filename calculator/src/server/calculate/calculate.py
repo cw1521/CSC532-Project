@@ -1,6 +1,5 @@
 import re
 
-
 def get_validation_regex():
     white_list = '''acos|asin|atan|atan2|ceil|cos|cosh|
         degrees|exp|fabs|floor|fmod|frexp|hypot|ldexp|
