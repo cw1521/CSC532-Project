@@ -12,5 +12,5 @@ def get_json_from_list(func_list):
 
 
 def get_list_from_json(func_string):
-    return json_decode(func_string)
+    return json_decode(func_string)["func_list"]
 
