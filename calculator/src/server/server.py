@@ -1,10 +1,7 @@
 from src.calculator import calculator as calc
-from src.sockethandler import sockethandler as sockhandler
+from src.sockethandler import socket_handler as sh
 import socket as sock
 from src.jsonhandler import json_handler as json
-
-
-HOST = '127.0.0.1'
 
 
 
@@ -23,7 +20,7 @@ HOST = '127.0.0.1'
 
 
 
-# def start(port):
+# def start(host, port):
 #     # Open socket
 
 #         # Bind to host and port

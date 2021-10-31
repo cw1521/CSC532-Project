@@ -1,10 +1,7 @@
 from src.jsonhandler import json_handler as json
-from src.sockethandler import sockethandler as sockhandler
+from src.sockethandler import socket_handler as sh
 import socket as sock
 
-
-HOST = '127.0.0.1'
-PORT = 65000
 
 
 
@@ -20,7 +17,7 @@ PORT = 65000
 
 
 
-# def start(port=65000):
+# def start(host, port):
 
 #     # Read file from file path
 
