@@ -2,52 +2,35 @@
 #from src.sockethandler import socket_handler as sh
 #import socket as sock #lol
 from tkinter import *
+import os
+from pathlib import Path
 
 root = Tk()
 root.title('CSC 532 Calculator')
-root.config(bg = "blue")
+#root.config(bg = "blue")
+#root.geometry('160x150')
 
 
 def clickCalButton():
     # this is where it it would call to calculate
-    print = Label(root, text='Calculating').grid(row=4, column=0)
-
-
-# def read_file(file_path):
-#     # Open file
-
-#         # Read the file line by line and append to list 
-#         # after removing trailing whitespace
-
-#     # Return list
-    
+    print = Label(root, text='Calculating').pack()
 
 
 
-# def start(host, port):
+def open_file():
 
-#     # Read file from file path
-
-#     # Convert the list to json
-
-#     # Open TCP socket
-
-#         # Connect to Host on port
-
-#         # Send the json encoded as UTF-8 string
-
-#         # Send the socket a shutdown message that this side of the 
-#         # socket will not send any more data and will
-#         # only listen for a reply
-    
-
-#         # Receive data
+    with os.scandir('test/src/') as entries:
+        for entry in entries:
+            if entry.is_file():
+                print(entry.name)
 
 
-from src.calculator import calculator as calc
-from src.sockethandler import socket_handler as sh
-import socket as sock
-from src.jsonhandler import json_handler as json
+
+
+#from src.calculator import calculator as calc
+#from src.sockethandler import socket_handler as sh
+#import socket as sock
+#from src.jsonhandler import json_handler as json
 
 
 
@@ -63,33 +46,10 @@ from src.jsonhandler import json_handler as json
 
 #     # Send the data over the socket as a UTF-8 encoded string
 
-
-
-
-# def start(host, port):
-#     # Open socket
-
-#         # Bind to host and port
-
-#         # Listen for incoming connections
-     
-#         # While true
-
-#             # Accept incoming connections
-
-#             # Handle the incoming connections
-
-#             # Close the connection
-
-
-from src.json import json_handler as json
-import socket as sock
-from os import getcwd as getcwd
-from src.sockethandler import socket_handler as sh
-
-
-
-
+#from src.json import json_handler as json
+#import socket as sock
+#from os import getcwd as getcwd
+#from src.sockethandler import socket_handler as sh
 
 def read_file(file_path):
     file_list = []
@@ -125,13 +85,19 @@ def start(host, port):
         s.connect((host, port))
         shutdown_server(s)
 
-title = Label(root, text='CSC 532 Calculator').grid(row=0, column=0)
-demand = Label(root, text='Enter a calculation').grid(row=1, column=0)
-inputfeild = Entry(root).grid(row =2, column = 0)
-calbutton = Button(root, text="Calculate" , padx=50, command= clickCalButton).grid(row=3, column=0)
+
+
+#title = Label(root, text='CSC 532 Calculator' , font=80).pack()
+demand1 = Label(root, text='Upload a file', font=16).pack()
+inputfeild1 = Entry(root).pack()
+btn = Button(root, text='Browse File Directory', padx=6, pady=6,font=16, command=lambda: open_file())
+btn.pack()
+demand = Label(root, text='Enter a problem', font=16).pack()
+inputfeild = Entry(root).pack()
+space = Label(root, text='                                                                                           ').pack()
+calbutton = Button(root, text="Calculate", font=16, command=clickCalButton).pack()
 
 root.mainloop()
-
 
 
 
