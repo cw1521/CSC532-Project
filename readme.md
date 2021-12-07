@@ -18,17 +18,17 @@ Ip addresses need to be enclosed in quotes. Ports do not need to be enclosed in 
 Code assumes that there are two servers
 * Local Initialization
   * Servers \
-_python3 csc-project/calculator s -p=64000_ \
-_python3 csc-project/calculator s -p=64001_ 
+_python3 csc532-project/calculator s -p=64000_ \
+_python3 csc532-project/calculator s -p=64001_ 
   * Client-Server \
-_python3 csc-project/calculator cs -p=65000 -sp1=64001 -sp2=64000_ 
+_python3 csc532-project/calculator cs -p=65000 -sp1=64001 -sp2=64000_ 
   * Client \
-_python3 csc-project/calculator c_ 
+_python3 csc532-project/calculator c_ 
 * Initialization over a Network 
   * Servers \
-_python3 csc-project/calculator s -p=64000_ \
-_python3 csc-project/calculator s -p=64001_ 
+_python3 csc532-project/calculator s -p=64000_ \
+_python3 csc532-project/calculator s -p=64001_ 
   * Client-Server \
-_python3 csc-project/calculator cs -p=65000 -sh1='10.0.2.15' -sp1=64000 -sh2='10.0.2.4' -sp2=64001_ 
+_python3 csc532-project/calculator cs -p=65000 -sh1='10.0.2.15' -sp1=64000 -sh2='10.0.2.4' -sp2=64001_ 
   * Client \
-python3 csc-project/calculator c -h='10.0.2.6' -p=65000_ 
+python3 csc532-project/calculator c -h='10.0.2.6' -p=65000_ 
