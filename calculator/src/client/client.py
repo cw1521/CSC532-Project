@@ -1,55 +1,34 @@
-#from src.jsonhandler import json_handler as json
-#from src.sockethandler import socket_handler as sh
-#import socket as sock #lol
-from tkinter import *
-import os
-from pathlib import Path
 
-root = Tk()
-root.title('CSC 532 Calculator')
+# from tkinter import *
+# import os
+# from pathlib import Path
+
+# root = Tk()
+# root.title('CSC 532 Calculator')
 #root.config(bg = "blue")
 #root.geometry('160x150')
 
 
-def clickCalButton():
-    # this is where it it would call to calculate
-    print = Label(root, text='Calculating').pack()
+# def clickCalButton():
+#     # this is where it it would call to calculate
+#     print = Label(root, text='Calculating').pack()
 
 
 
-def open_file():
+# def open_file():
 
-    with os.scandir('test/src/') as entries:
-        for entry in entries:
-            if entry.is_file():
-                print(entry.name)
-
-
-
-
-#from src.calculator import calculator as calc
-#from src.sockethandler import socket_handler as sh
-#import socket as sock
-#from src.jsonhandler import json_handler as json
+#     with os.scandir('test/src/') as entries:
+#         for entry in entries:
+#             if entry.is_file():
+#                 print(entry.name)
 
 
 
 
-# def handle_connection(conn, addr):
-#     # Receive data
-
-#     # Convert received data from json string to list
-
-#     # Calculate the answers from the list
-
-#     # Convert the answer list to a json string
-
-#     # Send the data over the socket as a UTF-8 encoded string
-
-#from src.json import json_handler as json
-#import socket as sock
-#from os import getcwd as getcwd
-#from src.sockethandler import socket_handler as sh
+from src.json import json_handler as json
+import socket as sock
+from os import getcwd as getcwd
+from src.sockethandler import socket_handler as sh
 
 def read_file(file_path):
     file_list = []
@@ -73,17 +52,13 @@ def start(host, port):
     # print(file_json)
 
     message = ''
-    # with sock.socket(sock.AF_INET, sock.SOCK_STREAM) as s:
-    #     s.connect((host, port))
-    #     sh.send_data(s, file_json.encode())
-    #     s.shutdown(sock.SHUT_WR)
-    #     message = sh.receive_data(s)
-    # print('message received: ', message)
-
-
     with sock.socket(sock.AF_INET, sock.SOCK_STREAM) as s:
         s.connect((host, port))
-        shutdown_server(s)
+        sh.send_data(s, file_json.encode())
+        s.shutdown(sock.SHUT_WR)
+        message = sh.receive_data(s)
+    print('message received: ', message)
+
 
 
 
