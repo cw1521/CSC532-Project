@@ -156,7 +156,8 @@ def test_host_port_args(hp_args_list):
 def server_args_conversion(arg):
     arg = arg.lower()
     new_arg = arg.replace('sh1', 'h').replace('sh2', 'h')
-    new_arg = arg.replace('sp1', 'p').replace('sp2', 'p')
+    new_arg = new_arg.replace('sp1', 'p').replace('sp2', 'p')
+    print(new_arg)
     return new_arg
 
 
@@ -178,8 +179,9 @@ def test_client_server_args(args):
     hp_args_list = list(filter(is_host_port_arg, args))
     server1_args_list = list(filter(is_server1_arg, args))
     server2_args_list = list(filter(is_server2_arg, args))
-    # print(server1_args_list)
+    # print(server1_args_list, server2_args_list, hp_args_list)
     if test_host_port_args(hp_args_list):
+        print(test_cs_server_args(server2_args_list), test_cs_server_args(server2_args_list))
         if test_cs_server_args(server1_args_list) and test_cs_server_args(server2_args_list):
             return True
         else:
