@@ -31,4 +31,4 @@ _python3 csc532-project/calculator s -p=64001_
   * Client-Server \
 _python3 csc532-project/calculator cs -p=65000 -sh1='10.0.2.15' -sp1=64000 -sh2='10.0.2.4' -sp2=64001_ 
   * Client \
-python3 csc532-project/calculator c -h='10.0.2.6' -p=65000_ 
+_python3 csc532-project/calculator c -h='10.0.2.6' -p=65000_
