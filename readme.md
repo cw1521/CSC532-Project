@@ -16,3 +16,4 @@ CSC 532 Project
 ### Example Initialization
 _python calculator cs -p=65000 -sh1='127.0.0.1' -sp1=64000 -sh2='127.0.0.1' -sp2=64001_
 * Ip addresses need to be enclosed in quotes. Ports do not need to be enclosed in quotes.
+* Code assumes that there are two servers
