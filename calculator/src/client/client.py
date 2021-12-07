@@ -88,16 +88,16 @@ def start(host, port):
 
 
 #title = Label(root, text='CSC 532 Calculator' , font=80).pack()
-demand1 = Label(root, text='Upload a file', font=16).pack()
-inputfeild1 = Entry(root).pack()
-btn = Button(root, text='Browse File Directory', padx=6, pady=6,font=16, command=lambda: open_file())
-btn.pack()
-demand = Label(root, text='Enter a problem', font=16).pack()
-inputfeild = Entry(root).pack()
-space = Label(root, text='                                                                                           ').pack()
-calbutton = Button(root, text="Calculate", font=16, command=clickCalButton).pack()
+# demand1 = Label(root, text='Upload a file', font=16).pack()
+# inputfeild1 = Entry(root).pack()
+# btn = Button(root, text='Browse File Directory', padx=6, pady=6,font=16, command=lambda: open_file())
+# btn.pack()
+# demand = Label(root, text='Enter a problem', font=16).pack()
+# inputfeild = Entry(root).pack()
+# space = Label(root, text='                                                                                           ').pack()
+# calbutton = Button(root, text="Calculate", font=16, command=clickCalButton).pack()
 
-root.mainloop()
+# root.mainloop()
 
 
 
