@@ -44,7 +44,7 @@ def shutdown_server(socket):
 
 def start(host, port):
     print("Client is running.")
-    file_path = 'calculator/src/functions.txt'
+    file_path = './calculator/src/functions.txt'
     file_list = read_file(file_path)
     # print(file_list)
 
