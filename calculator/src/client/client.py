@@ -52,6 +52,7 @@ def start(host, port):
     # print(file_json)
 
     message = ''
+    print(host,port)
     with sock.socket(sock.AF_INET, sock.SOCK_STREAM) as s:
         s.connect((host, port))
         sh.send_data(s, file_json.encode())
