@@ -30,7 +30,10 @@ _python3 csc-project/calculator cs -p=65000 -sp1=64001 -sp2=64000_
   * Client <br>
 _python3 csc-project/calculator c_ <br>
 * Initialization over a Network <br>
-_python3 csc-project/calculator s -p=64000 <br>
-python3 csc-project/calculator s -p=64001 <br>
-python3 csc-project/calculator cs -p=65000 -sh1='10.0.2.15' -sp1=64000 -sh2='10.0.2.4' -sp2=64001 <br>
+  * Servers <br>
+_python3 csc-project/calculator s -p=64000_ <br>
+_python3 csc-project/calculator s -p=64001_ <br>
+  * Client-Server <br>
+_python3 csc-project/calculator cs -p=65000 -sh1='10.0.2.15' -sp1=64000 -sh2='10.0.2.4' -sp2=64001_ <br>
+  * Client <br>
 python3 csc-project/calculator c -h='10.0.2.6' -p=65000_ <br>
