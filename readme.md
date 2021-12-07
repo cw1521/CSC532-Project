@@ -1,5 +1,6 @@
 # Distributed Calculator
 CSC 532 Project
+* For Educational use only. Authors not liable for misuse of the application.
 ## Starting the Calculator
 * Type _python calculator c arg-list_ to start the client from the command line
 
