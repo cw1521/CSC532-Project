@@ -25,7 +25,7 @@
 
 
 
-from src.json import json_handler as json
+from src.jsonhandler import json_handler as json
 import socket as sock
 from os import getcwd as getcwd
 from src.sockethandler import socket_handler as sh
